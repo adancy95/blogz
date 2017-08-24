@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <h1> Build a Blog Entry </h1>
+
+    <div>
+        <ul style="list-style-type:none">
+            {% for blog in blogs %}
+            <h2><li>{{blog.title}}</li></h2>
+            <li>{{blog.post}}</li>
+            <hr>
+        
+            {% endfor %}
+        </ul>
+
+    </div>
+
+{% endblock %}
