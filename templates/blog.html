@@ -6,7 +6,7 @@
     <div>
         <ul style="list-style-type:none">
             {% for blog in blogs %}
-            <h2><li>{{blog.title}}</li></h2>
+            <a href='/individual?post_id={{blog.id}}'><h2><li>{{blog.title}}</li></h2></a>
             <li>{{blog.post}}</li>
             <hr>
         
