@@ -1,12 +1,13 @@
-from flask import Flask, request, redirect, render_template
+
+from flask import Flask, request, redirect, render_template, session, flash
 from flask_sqlalchemy import SQLAlchemy
-import os
 
 app = Flask(__name__)
 app.config['DEBUG']=True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://build-a-blog:blog4life@localhost:8889/build-a-blog'
 app.config['SQLALCHEMY_ECHO'] =True
 db = SQLAlchemy(app)
+app.secret_key = 'y337kGcys&zP3B'
 
 class Blog(db.Model):
 
@@ -40,6 +41,7 @@ def valid():
     
 
     if title == "" or post == "":
+        flash('Blog Title or Your New Blog cannot be empty')
         return render_template('newpost.html')
     else:
         new_blog = Blog(title,post)
