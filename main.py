@@ -75,8 +75,14 @@ def valid():
     post = request.form['post']
     
 
-    if title == "" or post == "":
-        flash('Blog Title or Your New Blog cannot be empty')
+    if title == "" and post == "":
+        flash('Blog Title and Your New Blog cannot be empty')
+        return render_template('newpost.html')
+    elif title == "":
+        flash('Your Blog Title cannot be empty')
+        return render_template('newpost.html')
+    elif post == "":
+        flash(' Your New Blog cannot be empty')
         return render_template('newpost.html')
     else:
         owner = User.query.filter_by(username=session['username']).first()
