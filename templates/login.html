@@ -2,20 +2,49 @@
 
 {% block content %}
 
-<h1> Login </h1>
+<h2 class="header1"> Login </h2>
+<hr width="30%">
+
 
 <form action='/login' method="post">
-    <label for="username"> Username: </label>
-    <input type="text" name="username" value={{username}}>
-    <p>{{username_error}}</p>
-    <br>
-    <label for="passowrd"> Password: </label>
-    <input type ="text" name="password">
-    <p>{{password_error}}</p>
-    <br>
-    <input type="submit" value="Submit">
+    <div class="form-group">
+        <div class="row justify-content-center">
+            <div class="col-sm-3 align-self-center">
+            <div class="input-group">
+                    <span class="input-group-addon ion-person" id="basic-addon1"></span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value={{username}}>
+                    <p class="error">{{username_error}}</p>
+            </div>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-3 align-self-center">
+            <div class="input-group">
+                    <span class="input-group-addon ion-lock-combination" id="basic-addon1"></span>
+                    <input type="text" class="form-control " placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" value={{username}}>
+                    <p class="error">{{password_error}}</p>
+            </div>
+            </div>
+        </div>
+        <br>
+        <p id="center" >Don't have a account? <a href='/signup' class="navColors"> Create one!</a> </p>
+        
+    
+    
+    
+        <!-- <label for="username"> Username: </label>
+        <input type="text" name="username" value={{username}}> -->
+        
+        <!-- <br>
+        <label for="passowrd"> Password: </label>
+        <input type ="text" name="password">
+        <p>{{password_error}}</p>
+        </div>
+        <input class="navColors" type="submit" value="Submit">
 
-    <p>Don't have a account? <a href='/signup'> Create one!</a> </p>
+        <p>Don't have a account? <a href='/signup' class="navColors"> Create one!</a> </p> -->
+    </div>
 </form>
 
 {% endblock %}

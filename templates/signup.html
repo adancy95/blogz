@@ -1,23 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content%}
-    <h1> Signup </h1>
+    <h2 class="header1"> Signup </h2>
+    <hr width="30%">
+
     <form action='/signup' method='post'>
-        <label for="username">Username:</label>
-        <input name="username" type="text" value={{username}}>
-        <p>{{username_error}}</p>
-        <br>
+        <div class="form-group">
+            <div class="row justify-content-center">
+                <div class="col-sm-3 align-self-center">
+                <label for="username">Username:</label>
+                <input name="username" type="text" value={{username}}>
+                <p>{{username_error}}</p>
+                <br>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                    <div class="col-sm-3 align-self-center">
+                    <label for="password"> Password:</label>
+                    <input name="password" type="password">
+                    <p>{{password_error}}</p>
+                    <br>
 
-        <label for="password"> Password:</label>
-        <input name="password" type="password">
-        <p>{{password_error}}</p>
-        <br>
+                    <label name="verifyPass">Verify Password:</label>
+                    <input name="verifyPass" type="password">
+                    <br>
 
-        <label name="verifyPass">Verify Password:</label>
-        <input name="verifyPass" type="password">
-        <br>
-
-        <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
+        </div>
         
     </form>
 

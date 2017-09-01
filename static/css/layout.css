@@ -1,0 +1,29 @@
+.navColors {
+    color:#f29706;
+}
+
+.link-color {
+    color: #00fffc
+}
+
+#blog-name {
+    font-family: 'Rock Salt', cursive;
+}
+
+.header1 {
+    font-family: 'Rock Salt', cursive;
+    text-align: center
+}
+
+form {
+    top:50%;
+    left:50%;
+ }
+
+ .error {
+     color:red;
+ }
+
+#center {
+    text-align: center;
+}
