@@ -5,6 +5,8 @@
         <h2><li>{{blog.title}}</li></h2>
         <hr>
         <li>{{blog.post}}</li>
+        <br>
+        <p>written by: <a href='/blog?user={{blog.owner_id}}'>{{blogger.username}}</a></p>
     </ul>
 
 {% endblock %}

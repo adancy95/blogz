@@ -8,9 +8,14 @@
             {% for blog in blogs %}
             <a href='/individual?post_id={{blog.id}}'><h2><li>{{blog.title}}</li></h2></a>
             <li>{{blog.post}}</li>
-            <hr>
-        
+            <br>
+            <li> written by: <a href='/blog?user={{blog.owner_id}}'>{{blog.owner.username}}</a></li>
             {% endfor %}
+
+            
+            
+        
+            
         </ul>
 
     </div>
